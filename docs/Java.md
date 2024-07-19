@@ -131,8 +131,8 @@ float f=(float)1.22
 ```java
 //可以用+拼接变量和字符串
 System.out.print()
-System.out.println()
-//自带换行
+System.out.println() //自带换行
+
 System.out.printf()//和C语言的printf一样的
 ```
 
@@ -685,7 +685,6 @@ p就被称为上转型对象
 
 ```java
 //父类
-
 class Animal{
     public void makeSound(){
         System.out.println("dididi");
@@ -997,7 +996,6 @@ finally{
 
 ```java
 //1.利用字符串构造
-
 String string1 = new String("hello");
 System.out.println("string1 = " + string1);
 
@@ -1075,23 +1073,22 @@ X{m,n} X出现n到m次
 正则表达式的常用方法：
 
 ```java
-public boolean matches(String regex)（是否与表达式匹配）
+public boolean matches(String regex)                        //是否与表达式匹配
 
-public String replaceAll(String regex, String replacement)（替换）
+public String replaceAll(String regex, String replacement)  //替换
 
-public String[] split(String regex)（字符串分解）
+public String[] split(String regex)                         //字符串分解
 ```
 
 ## 第九章 输入/输出流
 
 ### 1. File类
 
-作用：Java提供 File 类来获取 文件 信息，并实现一些操作
+作用：Java提供`File`类来获取**文件**信息，并实现一些操作
 
 * 构造方法：
 ```java
 //第一种方式
-
 File f = new File("文件路径+文件名"); // 注意路径使用"\\"
 
 //第二种方式
@@ -1099,24 +1096,25 @@ File f = new File("文件路径", "文件名");
 ```
 
 * 常用的成员方法：
+*考试确实会涉及，但建议实际用的时候去看开发文档*
 ```java
-public boolean exists() //判断该对象对应的文件（夹）是否存在
-public boolean isFile() //判断该对象是否是文件
-public boolean isDirectroy()  //判断该对象是否是文件夹
-public String getName() //获得该文件的文件名
+public boolean exists()         //判断该对象对应的文件（夹）是否存在
+public boolean isFile()         //判断该对象是否是文件
+public boolean isDirectroy()    //判断该对象是否是文件夹
+public String getName()         //获得该文件的文件名
 public String getAbsolutePath() //获得该文件的绝对路径文件名
-public String getParent() //获得该对象的父目录
-public long getFreeSpace()  //获得该文件所在盘的剩余空间
-public long getTotalSpace() //获得该文件所在盘的总空间
-public long length()  //获取文件的长度，即文件的字节数
-public boolean canExecute() //用于检查当前文件是否可执行
-public boolean canWrite() //用于检查当前文件(夹)是否可写入
-public boolean canRead()  //用于检查当前文件(夹)是否可读取
-public boolean isHidden() //用于检查当前文件是否被隐藏
-public boolean mkdir()  //创建文件夹
+public String getParent()       //获得该对象的父目录
+public long getFreeSpace()      //获得该文件所在盘的剩余空间
+public long getTotalSpace()     //获得该文件所在盘的总空间
+public long length()            //获取文件的长度，即文件的字节数
+public boolean canExecute()     //用于检查当前文件是否可执行
+public boolean canWrite()       //用于检查当前文件(夹)是否可写入
+public boolean canRead()        //用于检查当前文件(夹)是否可读取
+public boolean isHidden()       //用于检查当前文件是否被隐藏
+public boolean mkdir()          //创建文件夹
 public boolean createNewFile()  //创建新文件
-public boolean delete() //删除文件（夹）
-public File[] listFiles() //返回目录下的全部文件（夹）
+public boolean delete()         //删除文件（夹）
+public File[] listFiles()       //返回目录下的全部文件（夹）
 ```
 
 
